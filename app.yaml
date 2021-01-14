@@ -1,0 +1,7 @@
+runtime: nodejs12
+network:
+    session_affinity: true
+env_variables:
+  EMAIL: "noreplymailfortest@gmail.com" 
+  PASS: "donotreply123"
+  MONGOURI: "mongodb+srv://ayush:UFkSazwQonRwSH4X@cluster0.bopuu.mongodb.net/test?retryWrites=true&w=majority"
