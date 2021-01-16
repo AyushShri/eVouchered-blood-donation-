@@ -3,6 +3,16 @@ node_js:
   - "stable" 
 script:
     - 'echo "Hello! This is Travis"'
+    - 'echo "Installing Dependencies"
+    - 'npm init'
+    - 'npm install express'
+    - 'npm install bcryptjs'
+    - 'npm install body-parser'
+    - 'npm install cors'
+    - 'npm install jsonwebtoken'
+    - 'npm install mongoose'
+    - 'npm install nodemailer'
+    
 
 deploy:
   provider: pages
