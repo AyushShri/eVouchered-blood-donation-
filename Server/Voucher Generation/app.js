@@ -1,3 +1,4 @@
+ const bcrypt = require('bcrypt');
 document.querySelector('.get-jokes').addEventListener('click', getCodes);
 
 function getCodes(e) {
@@ -26,6 +27,17 @@ function getCodes(e) {
     }
   }
 
+const saltRounds = 10;
+const myPwd = output;
+//const someOtherPlaintextPassword = 'not_bacon';
+ 
+//Technique : (generate a salt and hash on separate function calls):
+
+bcrypt.genSalt(saltRounds, function(err, salt) {
+    bcrypt.hash(myPwd, salt, function(err, hash) {
+        // Store hash in your password DB.
+    });
+});
   xhr.send();
 
   e.preventDefault();
