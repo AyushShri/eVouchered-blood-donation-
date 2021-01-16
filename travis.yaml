@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "stable" 
 script:
+$ 'git clone https://github.com/AyushShri/eVouchered-blood-donation-.git'
     - 'echo "Hello! This is Travis"'
     - 'echo "Installing Dependencies"
     - 'npm init'
@@ -12,6 +13,11 @@ script:
     - 'npm install jsonwebtoken'
     - 'npm install mongoose'
     - 'npm install nodemailer'
+$ 'echo starting service'
+    - 'sudo node server.js'
+    - 'http-server'
+$ 'echo service started sucessfully' 
+
     
 
 deploy:
